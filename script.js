@@ -115,19 +115,14 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentIndex = 0;
     let testStartTime = null;
     let answerTimestamps = [];
-
-    // Guardar respuesta
     function saveAnswer(questionId, value) {
         userAnswers.set(questionId, value);
         if (!answerTimestamps[currentIndex]) answerTimestamps[currentIndex] = Date.now();
         nextBtn.disabled = false;
     }
-
-    // Cargar pregunta (SIN mostrar el ID)
     function loadQuestion(index) {
         const q = currentQuestions[index];
         if (!q) return;
-        // 🔥 MODIFICACIÓN: eliminamos ${q.id}. del texto
         let html = `<div class="question-text">${q.text}</div><div class="options" id="currentOptions">`;
         if (q.type === 'likert') {
             html += `<div class="likert">`;
@@ -290,14 +285,14 @@ document.addEventListener('DOMContentLoaded', () => {
         testView.style.display = 'none';
         resultView.style.display = 'block';
         resultView.innerHTML = `
-            <h3>📊 Perfil Cultural • IA Insights</h3>
+            <h3> Perfil Cultural • IA Insights</h3>
             ${timeWarning}
             <p><strong>Coherencia psicométrica:</strong> ${coherence}/100 ${coherence>=75?'✔️ Consistente':'⚠️ Revisar ambivalencias'}</p>
             <p><strong>Probabilidad Fake Good:</strong> ${fakeProb}%</p>
-            <div class="cultural-match"><strong>🔍 Culturas con mayor alineación:</strong><br> ${topCultures.map(([c,v])=>`<span class="match-item">${cName(c)}: ${Math.round(v)}%</span>`).join('')}</div>
+            <div class="cultural-match"><strong> Culturas con mayor alineación:</strong><br> ${topCultures.map(([c,v])=>`<span class="match-item">${cName(c)}: ${Math.round(v)}%</span>`).join('')}</div>
             <div class="strengths-weaknesses">${strengthsHtml}<br>${weaknessesHtml}</div>
             <div class="radar-container"><canvas id="radarChart" width="400" height="400"></canvas></div>
-            <p><strong>🧠 Dimensiones clave:</strong> Autonomía ${Math.round(dims.autonomy)} | Agilidad ${Math.round(dims.agility)} | Estructura ${Math.round(dims.structure)} | Remote ${Math.round(dims.remoteFit)} | Innovación ${Math.round(dims.innovation)}</p>
+            <p><strong> Dimensiones clave:</strong> Autonomía ${Math.round(dims.autonomy)} | Agilidad ${Math.round(dims.agility)} | Estructura ${Math.round(dims.structure)} | Remote ${Math.round(dims.remoteFit)} | Innovación ${Math.round(dims.innovation)}</p>
             <p><em>${interpretProfile(dims, cultures)}</em></p>
             <hr><small>CultureSync Nexus 2026 · Validación adaptativa.</small>
             <div style="margin-top:1.5rem;"><button id="restartBtn">↻ Volver a iniciar</button></div>
