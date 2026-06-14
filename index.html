@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>CultureSync Nexus 2026 · Evaluación de Cultura Organizacional</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="NTEC_05_logo_nexus_03.png">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body>
+<div class="container" id="app">
+    <!-- INTRO -->
+    <div id="introView">
+        <div class="logo-banner">
+            <img src="NTEC_05_logo_nexus_06.png" alt="MEKUS Nexus Logo" class="logo-main">
+        </div>
+        <h1>🧬 CultureSync Nexus 2026</h1>
+        <div class="sub">Evaluación conductual · Cultural Fit · Talent Intelligence</div>
+        <div class="intro-description">
+            <p>En el entorno empresarial actual, la compatibilidad cultural es clave para el rendimiento, la retención y el bienestar.</p>
+            <p><strong>CultureSync Nexus 2026</strong> analiza patrones profundos: autonomía, jerarquía, tolerancia a incertidumbre, adaptabilidad, estructura, presión y remote-first.</p>
+            <p>🔍 Detecta compatibilidad auténtica mediante escenarios reales, preguntas espejo y validación psicométrica.</p>
+            <p>📊 Al finalizar obtendrás afinidad hacia 8 tipos de cultura: Startup Builder, Corporate Structured, Agile Collaborative, Innovation Lab, Remote First, Scale-Up Growth, Operational Excellence y Human-Centered.</p>
+            <p>⏱️ 57 preguntas · 10-15 minutos · Responde con honestidad.</p>
+            <button id="startTestBtn" class="start-btn">🌟 Comenzar evaluación 🌟</button>
+        </div>
+        <footer>Basado en metodología avanzada — Coherencia psicométrica & detección de sesgos</footer>
+    </div>
+
+    <!-- TEST -->
+    <div id="testView" style="display: none;">
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+            <div class="progress-text" id="progressText">Pregunta 0 / 57</div>
+        </div>
+        <div id="questionContainer"></div>
+        <div class="nav-buttons">
+            <button id="prevBtn" disabled>◀ Anterior</button>
+            <button id="nextBtn" disabled>Siguiente ▶</button>
+        </div>
+        <div class="test-footer">Responde con sinceridad. No hay respuestas correctas o incorrectas.</div>
+    </div>
+
+    <!-- RESULTADOS -->
+    <div id="resultView" style="display: none;" class="result-area"></div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
