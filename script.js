@@ -1,9 +1,7 @@
-// --------------------------------------------------------------
-// MASTER QUESTIONS (57 items)
-// --------------------------------------------------------------
+
 const MASTER_QUESTIONS = [];
 
-// Fase 1
+
 MASTER_QUESTIONS.push({ id: "P1", text: "Cuando recibes una tarea compleja:", type: "mc", options: ["A) Prefiero resolverla libremente.", "B) Necesito objetivos claros primero.", "C) Busco apoyo colaborativo inicial.", "D) Prefiero instrucciones detalladas."], phase: 1, mapping: { autonomy: {A:100, B:40, C:55, D:20}, agility: {A:85, B:40, C:50, D:20} } });
 MASTER_QUESTIONS.push({ id: "P2", text: "Cuando no existe un procedimiento claro:", type: "likert", minLabel: "1 Me bloqueo", maxLabel: "5 Construyo soluciones", phase: 1, mappingDim: { autonomy: true, ambiguity: true } });
 MASTER_QUESTIONS.push({ id: "P3", text: "Si detectas una mejora importante:", type: "mc", options: ["A) La implemento rápidamente.", "B) Primero valido con responsables.", "C) Busco consenso grupal.", "D) Espero aprobación formal."], phase:1, mapping: { autonomy: {A:95, B:55, C:40, D:15}, agility:{A:90,B:45,C:40,D:10} } });
@@ -11,7 +9,7 @@ MASTER_QUESTIONS.push({ id: "P4", text: "¿Qué entorno te hace rendir mejor?", 
 MASTER_QUESTIONS.push({ id: "P5", text: "Cuando tu manager supervisa constantemente tu trabajo:", type:"mc", options:["A) Me siento limitado.","B) Lo considero razonable.","C) Depende de la situación.","D) Me hace sentir más seguro."], phase:1, mapping:{ autonomy:{A:90,B:35,C:50,D:10}, hierarchy:{A:85,B:50,C:50,D:10} } });
 MASTER_QUESTIONS.push({ id: "P6", text: "Cuando tienes libertad total para organizarte:", type:"likert", minLabel:"1 Me cuesta muchísimo", maxLabel:"5 Rindo muchísimo mejor", phase:1, mappingDim:{ autonomy:true } });
 
-// Fase 2
+
 MASTER_QUESTIONS.push({ id: "P7", text: "Tu empresa cambia prioridades constantemente.", type:"mc", options:["A) Me motiva el dinamismo.","B) Intento adaptarme.","C) Necesito estabilidad.","D) Me desgasta emocionalmente."], phase:2, mapping:{ agility:{A:95,B:65,C:20,D:5}, ambiguity:{A:90,B:60,C:20,D:5} } });
 MASTER_QUESTIONS.push({ id: "P8", text: "Cuando aparecen herramientas nuevas:", type:"likert", minLabel:"1 Prefiero lo conocido", maxLabel:"5 Disfruto experimentar", phase:2, mappingDim:{ agility:true, innovation:true } });
 MASTER_QUESTIONS.push({ id: "P9", text: "Cuando los planes cambian inesperadamente:", type:"mc", options:["A) Improviso rápidamente.","B) Intento reorganizarme.","C) Necesito tiempo para ajustar.","D) Me genera tensión importante."], phase:2, mapping:{ agility:{A:90,B:70,C:35,D:10}, ambiguity:{A:85,B:70,C:40,D:10} } });
@@ -19,7 +17,7 @@ MASTER_QUESTIONS.push({ id: "P10", text: "¿Qué suele frustrarte más?", type:"
 MASTER_QUESTIONS.push({ id: "P11", text: "Cuando una empresa cambia completamente de estrategia:", type:"likert", minLabel:"1 Inseguridad", maxLabel:"5 Oportunidad", phase:2, mappingDim:{ agility:true, ambiguity:true } });
 MASTER_QUESTIONS.push({ id: "P12", text: "¿Qué te representa más?", type:"mc", options:["A) Explorar nuevas formas.","B) Estabilidad operativa.","C) Equilibrio entre ambas.","D) Evitar cambios frecuentes."], phase:2, mapping:{ agility:{A:95,B:15,C:55,D:5}, innovation:{A:90,B:15,C:55,D:5} } });
 
-// Fase 3
+
 MASTER_QUESTIONS.push({ id: "P13", text: "Cuando una persona con autoridad toma una mala decisión:", type:"mc", options:["A) La cuestiono directamente.","B) Intento debatir racionalmente.","C) Prefiero adaptarme.","D) Sigo instrucciones aunque no esté de acuerdo."], phase:3, mapping:{ hierarchy:{A:90,B:75,C:35,D:10}, autonomy:{A:85,B:60,C:30,D:15} } });
 MASTER_QUESTIONS.push({ id: "P14", text: "Tu forma ideal de organización:", type:"likert", minLabel:"1 Total improvisación", maxLabel:"5 Muy estructurada", phase:3, mappingDim:{ structure:true } });
 MASTER_QUESTIONS.push({ id: "P15", text: "¿Qué estructura prefieres?", type:"mc", options:["A) Horizontal y flexible.","B) Liderazgo claro pero cercano.","C) Equilibrio autonomía y control.","D) Jerarquía definida."], phase:3, mapping:{ hierarchy:{A:85,B:55,C:50,D:20}, structure:{A:15,B:55,C:50,D:90} } });
@@ -27,7 +25,7 @@ MASTER_QUESTIONS.push({ id: "P16", text: "Cuando existen demasiadas reglas:", ty
 MASTER_QUESTIONS.push({ id: "P17", text: "Cuando no existe supervisión clara:", type:"likert", minLabel:"1 Me siento perdido", maxLabel:"5 Funciono perfectamente autónomo", phase:3, mappingDim:{ autonomy:true } });
 MASTER_QUESTIONS.push({ id: "P18", text: "¿Qué entorno laboral evitarías más?", type:"mc", options:["A) Demasiado burocrático.","B) Demasiado caótico.","C) Muy competitivo.","D) Excesivamente rígido."], phase:3, mapping:{ structure:{A:85,B:20,C:50,D:90}, agility:{A:90,B:10,C:40,D:85} } });
 
-// Fase 4
+
 MASTER_QUESTIONS.push({ id: "P19", text: "En equipos nuevos normalmente:", type:"mc", options:["A) Conecto rápidamente.","B) Observo antes de participar.","C) Me adapto progresivamente.","D) Prefiero mantener distancia inicial."], phase:4, mapping:{ collaboration:{A:90,B:55,C:70,D:20} } });
 MASTER_QUESTIONS.push({ id: "P20", text: "¿Qué entorno social prefieres?", type:"mc", options:["A) Muy dinámico y social.","B) Profesional pero cercano.","C) Tranquilo y enfocado.","D) Muy independiente."], phase:4, mapping:{ collaboration:{A:90,B:75,C:40,D:15} } });
 MASTER_QUESTIONS.push({ id: "P21", text: "Cuando surgen conflictos interpersonales:", type:"likert", minLabel:"1 Evito involucrarme", maxLabel:"5 Suelo mediar activamente", phase:4, mappingDim:{ collaboration:true } });
@@ -35,7 +33,7 @@ MASTER_QUESTIONS.push({ id: "P22", text: "Cuando trabajas con perfiles muy disti
 MASTER_QUESTIONS.push({ id: "P23", text: "Cuando una empresa tiene mucha actividad social interna:", type:"mc", options:["A) Me energiza muchísimo.","B) Me gusta moderadamente.","C) Depende del ambiente.","D) Me satura rápidamente."], phase:4, mapping:{ collaboration:{A:90,B:70,C:55,D:15} } });
 MASTER_QUESTIONS.push({ id: "P24", text: "¿Qué valoras más en un equipo?", type:"mc", options:["A) Autonomía.","B) Comunicación.","C) Estabilidad.","D) Innovación."], phase:4, mapping:{ autonomy:{A:95,B:40,C:35,D:80}, collaboration:{A:40,B:95,C:50,D:70} } });
 
-// Fase 5
+
 MASTER_QUESTIONS.push({ id: "P25", text: "Cuando nadie sabe exactamente qué hacer:", type:"mc", options:["A) Intento liderar soluciones.","B) Analizo alternativas.","C) Espero más claridad.","D) Me genera bastante ansiedad."], phase:5, mapping:{ ambiguity:{A:90,B:70,C:30,D:10}, autonomy:{A:85,B:65,C:35,D:10} } });
 MASTER_QUESTIONS.push({ id: "P26", text: "Cuando trabajas bajo presión:", type:"likert", minLabel:"1 Me bloqueo", maxLabel:"5 Rindo muy bien", phase:5, mappingDim:{ agility:true, resilience:true } });
 MASTER_QUESTIONS.push({ id: "P27", text: "Cuando existe incertidumbre empresarial:", type:"mc", options:["A) Me motiva participar.","B) Intento adaptarme.","C) Necesito información clara.","D) Me desgasta mucho."], phase:5, mapping:{ ambiguity:{A:90,B:65,C:25,D:5}, agility:{A:85,B:70,C:30,D:5} } });
@@ -43,21 +41,21 @@ MASTER_QUESTIONS.push({ id: "P28", text: "Cuando debes decidir rápido:", type:"
 MASTER_QUESTIONS.push({ id: "P29", text: "Cuando hay demasiadas prioridades simultáneas:", type:"likert", minLabel:"1 Me saturo rápido", maxLabel:"5 Gestiono multitarea muy bien", phase:5, mappingDim:{ agility:true, resilience:true } });
 MASTER_QUESTIONS.push({ id: "P30", text: "¿Qué te genera más desgaste?", type:"mc", options:["A) Micromanagement.","B) Falta total de estructura.","C) Ritmos demasiado lentos.","D) Incertidumbre continua."], phase:5, mapping:{ autonomy:{A:95,B:20,C:70,D:40}, structure:{A:10,B:85,C:70,D:45} } });
 
-// Fase 6
+
 MASTER_QUESTIONS.push({ id: "P31", text: "¿Qué suele motivarte más?", type:"mc", options:["A) Construir cosas nuevas.","B) Estabilidad profesional.","C) Aprendizaje continuo.","D) Impacto humano."], phase:6, mapping:{ innovation:{A:95,B:10,C:85,D:70}, collaboration:{A:40,B:20,C:60,D:90} } });
 MASTER_QUESTIONS.push({ id: "P32", text: "¿Qué valoras más en una empresa?", type:"mc", options:["A) Flexibilidad.","B) Seguridad.","C) Innovación.","D) Buen ambiente."], phase:6, mapping:{ autonomy:{A:90,B:30,C:80,D:50}, structure:{A:30,B:95,C:50,D:40} } });
 MASTER_QUESTIONS.push({ id: "P33", text: "Cuando piensas en crecimiento profesional:", type:"likert", minLabel:"1 Prefiero estabilidad", maxLabel:"5 Necesito retos constantes", phase:6, mappingDim:{ agility:true, innovation:true } });
 MASTER_QUESTIONS.push({ id: "P34", text: "¿Qué tipo de cultura evitarías más?", type:"mc", options:["A) Excesivamente burocrática.","B) Muy impredecible.","C) Muy competitiva.","D) Muy rígida socialmente."], phase:6, mapping:{ structure:{A:95,B:15,C:50,D:70}, agility:{A:20,B:85,C:45,D:70} } });
 MASTER_QUESTIONS.push({ id: "P35", text: "¿Qué describe mejor tu motivación profesional?", type:"mc", options:["A) Libertad.","B) Impacto.","C) Seguridad.","D) Innovación."], phase:6, mapping:{ autonomy:{A:95,B:50,C:10,D:80}, innovation:{A:80,B:70,C:10,D:100} } });
 
-// Fase 7
+
 MASTER_QUESTIONS.push({ id: "P36", text: "Trabajando remoto normalmente:", type:"likert", minLabel:"1 Pierdo productividad", maxLabel:"5 Rindo muchísimo mejor", phase:7, mappingDim:{ remoteFit:true, autonomy:true } });
 MASTER_QUESTIONS.push({ id: "P37", text: "¿Qué modalidad prefieres?", type:"mc", options:["A) Remote First.","B) Híbrido flexible.","C) Presencial colaborativo.","D) Depende del proyecto."], phase:7, mapping:{ remoteFit:{A:100,B:75,C:20,D:60}, autonomy:{A:95,B:70,C:25,D:60} } });
 MASTER_QUESTIONS.push({ id: "P38", text: "Cuando trabajas sin supervisión directa:", type:"mc", options:["A) Aumento productividad.","B) Mantengo rendimiento estable.","C) Necesito cierta validación.","D) Me cuesta organizarme."], phase:7, mapping:{ remoteFit:{A:100,B:75,C:30,D:5}, autonomy:{A:95,B:65,C:25,D:5} } });
 MASTER_QUESTIONS.push({ id: "P39", text: "Cuando hay demasiadas reuniones online:", type:"mc", options:["A) Me agotan muchísimo.","B) Las tolero razonablemente.","C) Depende del equipo.","D) Me siento cómodo."], phase:7, mapping:{ remoteFit:{A:80,B:55,C:50,D:25}, collaboration:{A:20,B:55,C:70,D:90} } });
 MASTER_QUESTIONS.push({ id: "P40", text: "¿Qué describe mejor tu estilo remoto?", type:"mc", options:["A) Muy independiente.","B) Equilibrado.","C) Necesito bastante interacción.","D) Prefiero presencialidad."], phase:7, mapping:{ remoteFit:{A:95,B:70,C:30,D:10}, autonomy:{A:95,B:65,C:25,D:5} } });
 
-// Fase 8 (Escenarios)
+
 const scenarios = [
     { id: "ESC1", text: "Escenario 1: Una startup cambia completamente el roadmap del producto.", options:["A) Me entusiasma el reto.","B) Intento reorganizar prioridades.","C) Necesito entender razones.","D) Preferiría mayor estabilidad."], mapping:{ agility:{A:95,B:70,C:50,D:10}, ambiguity:{A:90,B:70,C:55,D:10} } },
     { id: "ESC2", text: "Escenario 2: Tu empresa elimina procesos y deja más autonomía.", options:["A) Me motiva muchísimo.","B) Me adapto razonablemente.","C) Necesito cierta estructura.","D) Me genera inseguridad."], mapping:{ autonomy:{A:95,B:65,C:35,D:5}, structure:{A:10,B:40,C:80,D:90} } },
@@ -67,7 +65,7 @@ const scenarios = [
 ];
 scenarios.forEach(s => MASTER_QUESTIONS.push({ ...s, type:"mc", phase:8 }));
 
-// Fase 9 (Espejo)
+
 const mirrorItems = [
     { id:"P41", text:"Necesito bastante autonomía para rendir bien.", type:"likert" },
     { id:"P42", text:"Prefiero supervisión frecuente y seguimiento constante.", type:"likert" },
@@ -84,9 +82,6 @@ const mirrorItems = [
 ];
 mirrorItems.forEach(m => MASTER_QUESTIONS.push({ ...m, phase:9, mappingDim: { } }));
 
-// --------------------------------------------------------------
-// UTILS
-// --------------------------------------------------------------
 function shuffleArray(arr) {
     const shuffled = [...arr];
     for (let i = shuffled.length - 1; i > 0; i--) {
@@ -96,9 +91,6 @@ function shuffleArray(arr) {
     return shuffled;
 }
 
-// --------------------------------------------------------------
-// MAIN
-// --------------------------------------------------------------
 document.addEventListener('DOMContentLoaded', () => {
     const introView = document.getElementById('introView');
     const testView = document.getElementById('testView');
@@ -169,7 +161,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Scoring (sin cambios)
     function computeDimensionScores() {
         let dims = { autonomy:0, agility:0, structure:0, remoteFit:0, ambiguity:0, collaboration:0, hierarchy:0, innovation:0, count:{} };
         for (let [qid, rawAnswer] of userAnswers.entries()) {
